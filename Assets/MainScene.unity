@@ -266,7 +266,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 36.2
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -292,12 +292,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4, y: 1.2, z: -58.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4.6399994}
+  m_LocalScale: {x: 0.73882526, y: 0.7949125, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1967094663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1494684877
 GameObject:
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 1494684879}
   - component: {fileID: 1494684878}
   - component: {fileID: 1494684880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: midGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 97
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: df83cc7ed806d094baf74be39b67e5d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -687,7 +687,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_Sprite: {fileID: -1999870131, guid: e6ceb84c4a086684ebaffc39b2dd72d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -708,11 +708,12 @@ Transform:
   m_GameObject: {fileID: 1967094659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 3.286, z: -47}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalPosition: {x: -0.4632, y: 1.239, z: -47}
+  m_LocalScale: {x: 1.3535, y: 1.258, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1937467083}
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1967094664
@@ -730,7 +731,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -776,6 +777,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 7
+  jumpHeight: 400
+  groundChecker: {fileID: 1937467083}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &1967094667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,8 +794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5ac30b6d32e2148acb659cad884cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  jump: 500
 --- !u!1001 &565174249499138318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -859,6 +863,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 638205826984614227, guid: e60a4dbd85abed74084e4fb93ee2366f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 1670372722205508853, guid: e60a4dbd85abed74084e4fb93ee2366f, type: 3}
       propertyPath: m_Name
       value: bridgePlatform
@@ -920,6 +928,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3949154341186987639, guid: 8a4f9baf4e78fc84893b5f1afa3f60d8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 6469159198239407986, guid: 8a4f9baf4e78fc84893b5f1afa3f60d8, type: 3}
       propertyPath: m_Name
       value: shortPlatform
@@ -977,7 +989,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
   - {fileID: 135814331}
   - {fileID: 1494684879}
   - {fileID: 565174249499138318}
